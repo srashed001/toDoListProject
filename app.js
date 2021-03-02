@@ -82,7 +82,6 @@ todoList.addEventListener("click", function(event) {
       }
       localStorage.setItem("todos", JSON.stringify(result));
       savedTodos = result 
-      console.log(savedTodos)
       itemClicked.parentElement.remove();
       
     };
@@ -102,7 +101,7 @@ todoList.addEventListener("click", function(event) {
         } else results.push({ task: taskName, isCompleted: true})
       } 
       localStorage.setItem("todos", JSON.stringify(results));
-      console.log(results)
+   
       };
       if (completionStatus === "true"){
         itemClicked.setAttribute("status", false);
@@ -116,17 +115,7 @@ todoList.addEventListener("click", function(event) {
         } else results.push({ task: taskName, isCompleted: false})
       } 
       localStorage.setItem("todos", JSON.stringify(results));
-      console.log(results);
-
       }
     }
-        
-        // itemClicked.className = "";
-    //     // itemClicked.isCompleted = true;
-    // } else if (itemClicked.className === ""){
-    //     itemClicked.parentElement.style.textDecoration = "none";
-    //     itemClicked.className = "completed";
-    //     itemClicked.isCompleted = false;
-    // };
   }); 
 
